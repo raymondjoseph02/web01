@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/front-end.css">
+    <script src="./fontend-form.js" defer ></script>
+</head>
+<body>
+    <form onsubmit="preventFormToReload()">
+        <h3>Contact us</h3>
+        <div class="form-content-wrapper">
+            <div class="username-wrapper">
+                <div class="display-in-flex-row">
+                 <label for="firstName">first Name *</label>
+                 <input class="inputField" type="text" name="firstName" id="firstName"  oninput="errorMessage()">
+                 <small id="firstNameError"></small>
+
+                </div>
+               <div class="display-in-flex-row">
+                 <label for="lastName">last Name *</label>
+                 <input class="inputField" type="text" name="lastName" id="lastName" oninput="lastNameerrorMessage()">
+                 <small class="lastNameErroeMessage"></small>
+               </div>
+            </div>
+             <div class="display-in-flex-row">
+     
+                 <label for="email" class="Email">Email Adderess *</label>
+                 <input class="inputField" type="email" name="email" id="email" class="Email"  oninput="clearEemailErrorMessage()">
+                 <small class="email-error-message"></small>
+     
+            </div>
+             <div class="display-in-flex-row">
+                 <p>Query type *</p>
+                <div class="display-in-flex-colume">
+                     <div class="radioType-style">
+                         <input class="inputField" type="radio" name="queryType" id="generalEquiry" >
+                         <span class="radioSpan"></span>
+
+                         <label for="generalEquiry">General Equiry</label>
+                     </div>
+                     <div class="radioType-style">
+                         <input class="inputField checkbox" type="radio" name="queryType" id="supportRequest" >
+                         <span class="radioSpan"></span>
+                         <label for="supportRequest">Support Request</label>
+                     </div>
+                </div>
+     
+            </div>
+            <div class="display-in-flex-row">
+                 <label for="message">Message *</label>
+                 <textarea name="message" id="message" maxlength="90" ></textarea>
+                 <small id="messageError"></small>
+             </div>
+                <div class="checkbox-style ">
+                    <input class="inputField checkBox" type="checkbox" name="termsandcondition" id="termsandcondition">
+                    <span class="checkboxSpan"></span>
+
+                    <label for="termsandcondition" class="termsandcondition1">I console to contacted by the team</label>
+                </div>
+        </div>
+        <button id="submitBtn" type="submit"  onclick="validation()" class="button">submit</button>
+    </form>
+</body>
+</html>
